@@ -6,3 +6,10 @@ build-std-features = ["compiler-builtins-mem"]
 
 [build]
 target = "x86_64-blog_os.json"
+
+[dependencies]
+bootloader = "0.9"
+
+
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"
